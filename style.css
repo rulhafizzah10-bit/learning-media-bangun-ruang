@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangun Ruang Sisi Lengkung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Media Pembelajaran Interaktif</p>
+          <h1>Bangun Ruang Sisi Lengkung</h1>
+        </div>
+        <div class="session-tools">
+          <div class="session-pill">Session: <span id="sessionId">-</span></div>
+          <button id="newSessionBtn" class="secondary-btn">Scan Baru</button>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="model-panel card">
+          <div class="panel-header">
+            <h2>Kerucut</h2>
+            <span class="badge">3D</span>
+          </div>
+
+          <div class="shape-stage" aria-label="Model 3D kerucut">
+            <svg viewBox="0 0 420 320" class="cone-svg" role="img" aria-labelledby="coneTitle coneDesc">
+              <title id="coneTitle">Model kerucut</title>
+              <desc id="coneDesc">Kerucut dengan label alas, tinggi, selimut, dan garis pelukis.</desc>
+
+              <defs>
+                <linearGradient id="coneBody" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#78d5ff" />
+                  <stop offset="100%" stop-color="#2675ff" />
+                </linearGradient>
+              </defs>
+
+              <g class="guide-lines">
+                <line x1="210" y1="76" x2="210" y2="242" class="axis-line" />
+                <line x1="210" y1="242" x2="97" y2="242" class="axis-line faint" />
+                <line x1="210" y1="76" x2="312" y2="242" class="axis-line faint" />
+              </g>
+
+              <g class="cone-group">
+                <path d="M210 76 L318 242 L102 242 Z" class="cone-surface" id="surfacePath" />
+                <ellipse cx="210" cy="242" rx="108" ry="22" class="base-ellipse" />
+                <circle cx="210" cy="242" r="104" class="base-circle" />
+              </g>
+
+              <g class="hotspot-layer">
+                <g class="point-group" data-target="alas">
+                  <circle cx="210" cy="242" r="12" class="point-ring" />
+                  <circle cx="210" cy="242" r="5" class="point-core" />
+                </g>
+
+                <g class="point-group" data-target="tinggi">
+                  <circle cx="210" cy="76" r="12" class="point-ring" />
+                  <circle cx="210" cy="76" r="5" class="point-core" />
+                </g>
+
+                <g class="point-group" data-target="selimut">
+                  <circle cx="275" cy="185" r="12" class="point-ring" />
+                  <circle cx="275" cy="185" r="5" class="point-core" />
+                </g>
+
+                <g class="point-group" data-target="garis-pelukis">
+                  <circle cx="152" cy="160" r="12" class="point-ring" />
+                  <circle cx="152" cy="160" r="5" class="point-core" />
+                </g>
+              </g>
+
+              <g class="label-layer">
+                <text x="225" y="265" class="label label-base">Alas</text>
+                <text x="185" y="55" class="label label-top">Titik puncak</text>
+                <text x="282" y="182" class="label label-side">Selimut</text>
+                <text x="95" y="155" class="label label-side">Garis pelukis</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="hotspot-actions">
+            <button class="spot-btn active" data-target="alas">Alas</button>
+            <button class="spot-btn" data-target="tinggi">Tinggi</button>
+            <button class="spot-btn" data-target="selimut">Selimut</button>
+            <button class="spot-btn" data-target="garis-pelukis">Garis Pelukis</button>
+            <button class="spot-btn" data-target="volume">Volume</button>
+          </div>
+        </section>
+
+        <aside class="concept-panel card">
+          <div class="panel-header">
+            <h2 id="conceptTitle">Alas Kerucut</h2>
+            <span class="badge muted" id="conceptBadge">Konsep</span>
+          </div>
+
+          <div class="concept-body">
+            <p id="conceptText">
+              Alas kerucut berbentuk lingkaran dan menjadi dasar dari rumus luas alas dan volume.
+            </p>
+
+            <div class="formula-box">
+              <p class="formula-label">Rumus</p>
+              <div id="conceptFormula" class="formula">L = πr²</div>
+            </div>
+
+            <div class="derivation-box">
+              <p class="formula-label">Dari mana rumusnya?</p>
+              <p id="conceptDerivation">
+                Luas alas sama dengan luas lingkaran, karena alas kerucut merupakan lingkaran dengan jari-jari r.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <section class="lower-grid">
+        <div class="qr-panel card">
+          <div class="panel-header">
+            <h2>Kartu QR</h2>
+            <span class="badge muted">Scan</span>
+          </div>
+
+          <div class="qr-box">
+            <img id="qrImage" src="" alt="QR code untuk sesi pembelajaran" />
+          </div>
+          <p class="qr-info">
+            Setiap scan menghasilkan sesi unik. Soal yang muncul dapat berbeda sesuai level dan sesi.
+          </p>
+        </div>
+
+        <div class="quiz-panel card">
+          <div class="panel-header">
+            <h2>Latihan Soal</h2>
+            <span class="badge muted" id="levelBadge">Penerapan</span>
+          </div>
+
+          <div class="level-toolbar">
+            <button class="level-btn active" data-level="dasar">Dasar</button>
+            <button class="level-btn" data-level="penerapan">Penerapan</button>
+            <button class="level-btn" data-level="kritis">Kritis</button>
+            <button class="level-btn" data-level="cerita">Cerita</button>
+          </div>
+
+          <div class="question-card">
+            <p id="questionText" class="question-text">
+              Menghitung luas selimut kerucut jika jari-jari 7 cm dan panjang garis pelukis 10 cm.
+            </p>
+
+            <div id="answerOptions" class="answer-options"></div>
+
+            <div id="feedback" class="feedback hidden"></div>
+
+            <div class="quiz-actions">
+              <button id="checkAnswerBtn" class="primary-btn">Cek Jawaban</button>
+              <button id="nextQuestionBtn" class="secondary-btn">Soal Berikutnya</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
