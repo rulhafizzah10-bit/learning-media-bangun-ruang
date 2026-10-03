@@ -34,7 +34,7 @@
           <div class="shape-stage" aria-label="Model bangun ruang sisi lengkung">
             <svg viewBox="0 0 420 320" class="shape-svg" role="img" aria-labelledby="shapeTitle shapeDesc">
               <title id="shapeTitle">Model bangun ruang</title>
-              <desc id="shapeDesc">Bangun ruang yang dapat dipilih untuk melihat konsep dan rumusnya.</desc>
+              <desc id="shapeDesc">Bangun ruang dengan fokus pada bagian-bagian penting yang dipelajari.</desc>
 
               <defs>
                 <linearGradient id="shapeBody" x1="0" x2="1">
@@ -78,7 +78,7 @@
               </g>
 
               <g class="label-layer">
-                <text x="225" y="265" class="label">Alas</text>
+                <text x="224" y="265" class="label">Alas</text>
                 <text x="187" y="55" class="label">Titik puncak</text>
                 <text x="281" y="182" class="label">Selimut</text>
                 <text x="95" y="155" class="label">Garis pelukis</text>
@@ -86,7 +86,7 @@
             </svg>
           </div>
 
-          <div class="hotspot-actions">
+          <div class="hotspot-actions" id="focusButtons">
             <button class="focus-btn active" data-target="alas">Alas</button>
             <button class="focus-btn" data-target="tinggi">Tinggi</button>
             <button class="focus-btn" data-target="selimut">Selimut</button>
@@ -116,6 +116,11 @@
               <p id="conceptDerivation">
                 Luas alas sama dengan luas lingkaran karena alas kerucut berupa lingkaran dengan jari-jari r.
               </p>
+            </div>
+
+            <div class="steps-box">
+              <p class="formula-label">Langkah pemahaman</p>
+              <ul id="conceptSteps" class="concept-steps"></ul>
             </div>
           </div>
         </aside>

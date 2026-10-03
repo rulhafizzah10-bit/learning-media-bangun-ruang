@@ -68,7 +68,8 @@ button {
 h1,
 h2,
 h3,
-p {
+p,
+ul {
   margin-top: 0;
 }
 
@@ -285,7 +286,8 @@ h1 {
 }
 
 .formula-box,
-.derivation-box {
+.derivation-box,
+.steps-box {
   background: rgba(7, 21, 31, 0.7);
   border: 1px solid rgba(104, 213, 255, 0.15);
   border-radius: 18px;
@@ -304,6 +306,14 @@ h1 {
   font-size: clamp(1.6rem, 1vw + 1rem, 2.1rem);
   font-weight: 800;
   color: var(--secondary);
+}
+
+.concept-steps {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
 }
 
 .lower-grid {

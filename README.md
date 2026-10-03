@@ -8,35 +8,65 @@ const shapeData = {
         badge: 'Konsep',
         text: 'Alas kerucut berbentuk lingkaran. Karena bagian bawah kerucut menutup dan menyerupai bidang datar berbentuk lingkaran, maka luas alas dihitung dengan rumus luas lingkaran.',
         formula: 'L = πr²',
-        derivation: 'Lingkaran memiliki luas yang dihitung dari π × r × r. Karena jari-jari alas kerucut adalah r, maka luas alas adalah πr².'
+        derivation: 'Lingkaran memiliki luas yang dihitung dari π × r × r. Karena jari-jari alas kerucut adalah r, maka luas alas adalah πr².',
+        steps: [
+          'Bagian alas adalah bidang datar yang menutup kerucut.',
+          'Bidang itu berbentuk lingkaran.',
+          'Luas lingkaran adalah πr².',
+          'Karena alas kerucut sama dengan lingkaran, rumusnya juga πr².'
+        ]
       },
       tinggi: {
         title: 'Tinggi Kerucut',
         badge: 'Tinggi',
         text: 'Tinggi kerucut adalah jarak tegak lurus dari titik puncak ke pusat alas. Tinggi ini membentuk segitiga siku-siku bersama jari-jari dan garis pelukis.',
         formula: 't = jarak puncak ke pusat alas',
-        derivation: 'Jika dibuat garis dari titik puncak ke pusat alas, terbentuk segitiga siku-siku. Jarak itu disebut tinggi (t), dan digunakan untuk menghitung volume.'
+        derivation: 'Jika dibuat garis dari titik puncak ke pusat alas, terbentuk segitiga siku-siku. Jarak itu disebut tinggi (t), dan digunakan untuk menghitung volume.',
+        steps: [
+          'Hubungkan puncak kerucut ke pusat alas.',
+          'Garis itu tegak lurus terhadap alas.',
+          'Garis ini disebut tinggi kerucut.',
+          'Tinggi membantu kita menghitung volume dan garis pelukis.'
+        ]
       },
       selimut: {
         title: 'Selimut Kerucut',
         badge: 'Luas',
         text: 'Selimut kerucut adalah permukaan lengkung yang membungkus bagian samping. Jika dibuka, selimut tersebut membentuk juring lingkaran.',
         formula: 'Lselimut = πrs',
-        derivation: 'Luas selimut sama dengan luas juring lingkaran. Panjang busur juring tersebut sama dengan keliling alas, yaitu 2πr, dan jari-jari juringnya adalah s. Karena luas juring = 1/2 × panjang busur × jari-jari, hasilnya menjadi πrs.'
+        derivation: 'Luas selimut sama dengan luas juring lingkaran. Panjang busur juring tersebut sama dengan keliling alas, yaitu 2πr, dan jari-jari juringnya adalah s. Karena luas juring = 1/2 × panjang busur × jari-jari, hasilnya menjadi πrs.',
+        steps: [
+          'Selimut kerucut kalau dibuka akan membentuk juring.',
+          'Panjang busur juring sama dengan keliling alas.',
+          'Jari-jari juring sama dengan garis pelukis s.',
+          'Maka luas selimut = 1/2 × 2πr × s = πrs.'
+        ]
       },
       'garis-pelukis': {
         title: 'Garis Pelukis',
         badge: 'Hubungan',
         text: 'Garis pelukis (s) adalah sisi miring pada selimut kerucut. Garis ini menghubungkan titik puncak dengan titik pada keliling alas.',
         formula: 's² = r² + t²',
-        derivation: 'Dengan tinggi (t) dan jari-jari (r), terbentuk segitiga siku-siku. Dengan teorema Pythagoras, s² = r² + t².'
+        derivation: 'Dengan tinggi (t) dan jari-jari (r), terbentuk segitiga siku-siku. Dengan teorema Pythagoras, s² = r² + t².',
+        steps: [
+          'Jari-jari, tinggi, dan garis pelukis membentuk segitiga siku-siku.',
+          'Tinggi dan jari-jari adalah sisi tegak lurus.',
+          'Garis pelukis adalah sisi miring.',
+          'Dengan teorema Pythagoras, s² = r² + t².'
+        ]
       },
       volume: {
         title: 'Volume Kerucut',
         badge: 'Volume',
         text: 'Volume kerucut adalah sepertiga volume tabung dengan jari-jari dan tinggi yang sama.',
         formula: 'V = 1/3 πr²t',
-        derivation: 'Volume tabung adalah luas alas × tinggi = πr²t. Karena kerucut lebih runcing dan hanya menempati sebagian ruang, volumenya 1/3 dari tabung dengan ukuran yang sama.'
+        derivation: 'Volume tabung adalah luas alas × tinggi = πr²t. Karena kerucut lebih runcing dan hanya menempati sebagian ruang, volumenya 1/3 dari tabung dengan ukuran yang sama.',
+        steps: [
+          'Volume tabung = luas alas × tinggi = πr²t.',
+          'Kerucut memiliki bentuk yang runcing.',
+          'Hasilnya adalah sepertiga ruang tabung yang sama.',
+          'Jadi volume kerucut = 1/3 πr²t.'
+        ]
       }
     },
     questions: {
@@ -71,21 +101,39 @@ const shapeData = {
         badge: 'Konsep',
         text: 'Alas dan tutup tabung berbentuk lingkaran. Kedua lingkaran sejajar dan sama besar.',
         formula: 'Lalas = πr²',
-        derivation: 'Karena alas tabung berbentuk lingkaran, luas alas sama dengan luas lingkaran dengan jari-jari r.'
+        derivation: 'Karena alas tabung berbentuk lingkaran, luas alas sama dengan luas lingkaran dengan jari-jari r.',
+        steps: [
+          'Alas tabung adalah lingkaran.',
+          'Luas lingkaran adalah πr².',
+          'Karena alas tabung adalah lingkaran, rumusnya sama.',
+          'Jadi luas alas tabung = πr².'
+        ]
       },
       selimut: {
         title: 'Selimut Tabung',
         badge: 'Luas',
         text: 'Selimut tabung adalah permukaan melengkung yang menghubungkan alas dan tutup. Jika dibuka, selimut tabung akan membentuk persegi panjang.',
         formula: 'Lselimut = 2πrt',
-        derivation: 'Panjang persegi panjang sama dengan keliling alas, yaitu 2πr, sedangkan lebarnya adalah tinggi tabung t. Jadi luasnya = 2πr × t.'
+        derivation: 'Panjang persegi panjang sama dengan keliling alas, yaitu 2πr, sedangkan lebarnya adalah tinggi tabung t. Jadi luasnya = 2πr × t.',
+        steps: [
+          'Ketika selimut tabung dibuka, akan membentuk persegi panjang.',
+          'Panjang persegi panjang = keliling alas = 2πr.',
+          'Lebarnya = tinggi tabung = t.',
+          'Luas = 2πr × t = 2πrt.'
+        ]
       },
       volume: {
         title: 'Volume Tabung',
         badge: 'Volume',
         text: 'Volume tabung sama dengan luas alas dikali tinggi.',
         formula: 'V = πr²t',
-        derivation: 'Tabung dapat dipahami sebagai banyak lingkaran dengan luas πr² yang ditumpuk sampai tinggi t. Jadi volume = luas alas × tinggi.'
+        derivation: 'Tabung dapat dipahami sebagai banyak lingkaran dengan luas πr² yang ditumpuk sampai tinggi t. Jadi volume = luas alas × tinggi.',
+        steps: [
+          'Luas alas tabung = πr².',
+          'Tabung adalah tumpukan banyak lingkaran.',
+          'Setiap lingkaran ditumpuk sampai tinggi t.',
+          'Volume = luas alas × tinggi = πr²t.'
+        ]
       }
     },
     questions: {
@@ -100,7 +148,7 @@ const shapeData = {
         { question: 'Jika diameter tabung 14 cm dan tinggi 12 cm, luas alasnya adalah ...', options: ['44 cm²', '154 cm²', '308 cm²', '616 cm²'], answer: 1, explanation: 'r = 7 cm, maka L = πr² = 22/7 × 49 = 154 cm².' }
       ],
       kritis: [
-        { question: 'Dua tabung memiliki tinggi sama. Jika jari-jari tabung A dua kali jari-jari tabung B, maka perbandingan volume A : B adalah ...', options: ['1 : 2', '2 : 1', '4 : 1', '1 : 4'], answer: 2, explanation: 'Karena volume tabung bergantung pada r², jika r menjadi 2 kali lipat, volume menjadi 4 kali.' },
+        { question: 'Dua tabung memiliki tinggi sama. Jika jari-jari tabung A dua kali jari-jari tabung B, maka perbandingan volume A : B adalah ...', options: ['1 : 2', '2 : 1', '4 : 1', '1 : 4'], answer: 2, explanation: 'Karena volume tabung bergantung pada r², jika r menjadi 2 kali lipat, volume menjadi 4 kali lipat.' },
         { question: 'Sebuah tabung mempunyai luas selimut 132 cm² dan tinggi 7 cm. Jari-jari tabung tersebut adalah ...', options: ['2 cm', '3 cm', '4 cm', '6 cm'], answer: 1, explanation: '2πrt = 132. Maka 2 × 22/7 × r × 7 = 44r = 132, sehingga r = 3 cm.' },
         { question: 'Tabung A dan B memiliki jari-jari sama, tetapi tinggi A dua kali tinggi B. Perbandingan volume A : B adalah ...', options: ['1 : 2', '2 : 1', '1 : 4', '4 : 1'], answer: 1, explanation: 'Volume tabung berbanding lurus dengan tinggi, jadi jika tinggi dua kali lipat, volume juga dua kali lipat.' }
       ],
@@ -120,14 +168,26 @@ const shapeData = {
         badge: 'Luas',
         text: 'Permukaan bola adalah seluruh kulit luar yang membentuk lengkungan. Karena bentuknya bulat, luas permukaan bola dipengaruhi oleh jari-jari.',
         formula: 'L = 4πr²',
-        derivation: 'Luas permukaan bola dapat diturunkan dari konsep daerah yang menutup seluruh ruang bola. Hasilnya adalah 4πr².'
+        derivation: 'Luas permukaan bola dapat diturunkan dari konsep daerah yang menutup seluruh ruang bola. Hasilnya adalah 4πr².',
+        steps: [
+          'Permukaan bola membentuk lengkungan yang tertutup.',
+          'Semua titik pada permukaan berjarak sama dari pusat.',
+          'Luas permukaan bola berkaitan dengan empat kali luas lingkaran.',
+          'Maka luas permukaan = 4πr².'
+        ]
       },
       volume: {
         title: 'Volume Bola',
         badge: 'Volume',
         text: 'Volume bola adalah banyak ruang yang ditempati oleh benda berbentuk bola.',
         formula: 'V = 4/3 πr³',
-        derivation: 'Volume bola diperoleh dari pengolahan geometris dan integral; hasilnya adalah 4/3 πr³.'
+        derivation: 'Volume bola diperoleh dari pengolahan geometris dan integral; hasilnya adalah 4/3 πr³.',
+        steps: [
+          'Volume bola didapat dari bentuk geometri yang dibangun dari jari-jari.',
+          'Volume berbanding dengan pangkat tiga jari-jari.',
+          'Konstanta yang muncul pada bola adalah 4/3.',
+          'Jadi volume bola = 4/3 πr³.'
+        ]
       }
     },
     questions: {
@@ -164,6 +224,8 @@ const state = {
   selectedAnswer: null,
   answered: false
 };
+
+const doc = document;
 
 function getSessionIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
@@ -215,6 +277,13 @@ function renderShapeButtons() {
   });
 }
 
+function renderConceptSteps(concept) {
+  const stepsNode = document.getElementById('conceptSteps');
+  if (!stepsNode || !concept.steps) return;
+
+  stepsNode.innerHTML = concept.steps.map((item) => `<li>${item}</li>`).join('');
+}
+
 function showConcept(target) {
   const shape = shapeData[state.currentShape];
   const concept = shape.concepts[target];
@@ -227,6 +296,7 @@ function showConcept(target) {
   document.getElementById('conceptText').textContent = concept.text;
   document.getElementById('conceptFormula').textContent = concept.formula;
   document.getElementById('conceptDerivation').textContent = concept.derivation;
+  renderConceptSteps(concept);
 
   document.querySelectorAll('.focus-btn').forEach((button) => {
     button.classList.toggle('active', button.dataset.target === target);
@@ -380,3 +450,9 @@ function init() {
 }
 
 init();
+
+window.addEventListener('load', () => {
+  const qrImage = document.getElementById('qrImage');
+  if (qrImage) qrImage.alt = `QR code untuk sesi ${state.sessionId}`;
+});
+
