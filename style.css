@@ -25,14 +25,16 @@
       <main class="main-grid">
         <section class="model-panel card">
           <div class="panel-header">
-            <h2>Kerucut</h2>
+            <h2 id="shapeName">Kerucut</h2>
             <span class="badge">3D</span>
           </div>
 
-          <div class="shape-stage" aria-label="Model 3D kerucut">
+          <div class="shape-toolbar" id="shapeButtons"></div>
+
+          <div class="shape-stage" aria-label="Model bangun ruang sisi lengkung">
             <svg viewBox="0 0 420 320" class="cone-svg" role="img" aria-labelledby="coneTitle coneDesc">
-              <title id="coneTitle">Model kerucut</title>
-              <desc id="coneDesc">Kerucut dengan label alas, tinggi, selimut, dan garis pelukis.</desc>
+              <title id="coneTitle">Model bangun ruang</title>
+              <desc id="coneDesc">Bangun ruang dengan label area utama untuk konsep dan rumus.</desc>
 
               <defs>
                 <linearGradient id="coneBody" x1="0" x2="1">
