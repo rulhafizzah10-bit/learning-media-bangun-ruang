@@ -144,6 +144,27 @@ h1 {
   background: rgba(168, 208, 235, 0.04);
 }
 
+.shape-toolbar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.shape-btn {
+  background: rgba(104, 213, 255, 0.08);
+  border: 1px solid rgba(104, 213, 255, 0.15);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.shape-btn.active {
+  background: rgba(104, 213, 255, 0.18);
+  border-color: rgba(104, 213, 255, 0.45);
+}
+
 .shape-stage {
   background: linear-gradient(180deg, rgba(17, 43, 69, 0.75), rgba(13, 25, 36, 0.9));
   border: 1px solid rgba(104, 213, 255, 0.15);
@@ -151,15 +172,15 @@ h1 {
   padding: 16px;
 }
 
-.cone-svg {
+.shape-svg {
   display: block;
   width: 100%;
   height: 360px;
   transform: perspective(900px) rotateX(8deg);
 }
 
-.cone-surface {
-  fill: url(#coneBody);
+.shape-surface {
+  fill: url(#shapeBody);
   stroke: rgba(136, 224, 255, 0.45);
   stroke-width: 3;
   transition: all 0.25s ease;
@@ -170,7 +191,6 @@ h1 {
   stroke: rgba(136, 224, 255, 0.6);
   stroke-width: 2;
   fill: rgba(104, 213, 255, 0.08);
-  transition: all 0.25s ease;
 }
 
 .axis-line {
@@ -208,7 +228,7 @@ h1 {
   margin-top: 18px;
 }
 
-.spot-btn,
+.focus-btn,
 .level-btn,
 .primary-btn,
 .secondary-btn {
@@ -219,18 +239,17 @@ h1 {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.spot-btn,
+.focus-btn,
 .level-btn {
   background: rgba(104, 213, 255, 0.06);
   border-color: rgba(104, 213, 255, 0.15);
   color: var(--text);
 }
 
-.spot-btn.active,
+.focus-btn.active,
 .level-btn.active {
   background: linear-gradient(135deg, rgba(104, 213, 255, 0.18), rgba(58, 161, 255, 0.18));
   border-color: rgba(104, 213, 255, 0.45);
-  box-shadow: 0 0 0 1px rgba(104, 213, 255, 0.2);
 }
 
 .primary-btn {
@@ -245,10 +264,11 @@ h1 {
   color: var(--text);
 }
 
-.spot-btn:hover,
+.focus-btn:hover,
 .level-btn:hover,
 .primary-btn:hover,
-.secondary-btn:hover {
+.secondary-btn:hover,
+.shape-btn:hover {
   transform: translateY(-1px);
 }
 
@@ -352,7 +372,6 @@ h1 {
   border-radius: 12px;
   padding: 14px 16px;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .answer-option.selected {

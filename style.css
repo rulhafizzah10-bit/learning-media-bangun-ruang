@@ -29,15 +29,15 @@
             <span class="badge">3D</span>
           </div>
 
-          <div class="shape-toolbar" id="shapeButtons"></div>
+          <div id="shapeButtons" class="shape-toolbar"></div>
 
           <div class="shape-stage" aria-label="Model bangun ruang sisi lengkung">
-            <svg viewBox="0 0 420 320" class="cone-svg" role="img" aria-labelledby="coneTitle coneDesc">
-              <title id="coneTitle">Model bangun ruang</title>
-              <desc id="coneDesc">Bangun ruang dengan label area utama untuk konsep dan rumus.</desc>
+            <svg viewBox="0 0 420 320" class="shape-svg" role="img" aria-labelledby="shapeTitle shapeDesc">
+              <title id="shapeTitle">Model bangun ruang</title>
+              <desc id="shapeDesc">Bangun ruang yang dapat dipilih untuk melihat konsep dan rumusnya.</desc>
 
               <defs>
-                <linearGradient id="coneBody" x1="0" x2="1">
+                <linearGradient id="shapeBody" x1="0" x2="1">
                   <stop offset="0%" stop-color="#78d5ff" />
                   <stop offset="100%" stop-color="#2675ff" />
                 </linearGradient>
@@ -49,8 +49,8 @@
                 <line x1="210" y1="76" x2="312" y2="242" class="axis-line faint" />
               </g>
 
-              <g class="cone-group">
-                <path d="M210 76 L318 242 L102 242 Z" class="cone-surface" id="surfacePath" />
+              <g class="shape-group">
+                <path d="M210 76 L318 242 L102 242 Z" class="shape-surface" id="surfacePath" />
                 <ellipse cx="210" cy="242" rx="108" ry="22" class="base-ellipse" />
                 <circle cx="210" cy="242" r="104" class="base-circle" />
               </g>
@@ -78,20 +78,20 @@
               </g>
 
               <g class="label-layer">
-                <text x="225" y="265" class="label label-base">Alas</text>
-                <text x="185" y="55" class="label label-top">Titik puncak</text>
-                <text x="282" y="182" class="label label-side">Selimut</text>
-                <text x="95" y="155" class="label label-side">Garis pelukis</text>
+                <text x="225" y="265" class="label">Alas</text>
+                <text x="187" y="55" class="label">Titik puncak</text>
+                <text x="281" y="182" class="label">Selimut</text>
+                <text x="95" y="155" class="label">Garis pelukis</text>
               </g>
             </svg>
           </div>
 
           <div class="hotspot-actions">
-            <button class="spot-btn active" data-target="alas">Alas</button>
-            <button class="spot-btn" data-target="tinggi">Tinggi</button>
-            <button class="spot-btn" data-target="selimut">Selimut</button>
-            <button class="spot-btn" data-target="garis-pelukis">Garis Pelukis</button>
-            <button class="spot-btn" data-target="volume">Volume</button>
+            <button class="focus-btn active" data-target="alas">Alas</button>
+            <button class="focus-btn" data-target="tinggi">Tinggi</button>
+            <button class="focus-btn" data-target="selimut">Selimut</button>
+            <button class="focus-btn" data-target="garis-pelukis">Garis Pelukis</button>
+            <button class="focus-btn" data-target="volume">Volume</button>
           </div>
         </section>
 
@@ -114,7 +114,7 @@
             <div class="derivation-box">
               <p class="formula-label">Dari mana rumusnya?</p>
               <p id="conceptDerivation">
-                Luas alas sama dengan luas lingkaran, karena alas kerucut merupakan lingkaran dengan jari-jari r.
+                Luas alas sama dengan luas lingkaran karena alas kerucut berupa lingkaran dengan jari-jari r.
               </p>
             </div>
           </div>
@@ -170,4 +170,3 @@
     <script src="app.js"></script>
   </body>
 </html>
-
